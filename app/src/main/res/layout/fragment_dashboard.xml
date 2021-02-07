@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Ambulance near you"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <fragment
+        android:id="@+id/GoogleMap"
+        android:layout_below="@+id/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/GoogleMap"
+        android:id="@+id/CardView2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:src="@drawable/ambulance_transparent"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:text="Request Ambulance"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/CardView2"
+        android:id="@+id/CardView3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:src="@drawable/blood"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:text="Request Blood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
