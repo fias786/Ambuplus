@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:ignore="UselessParent"
+        android:id="@+id/topicRelativeLayout">
+
+    <TextView
+        android:id="@+id/topicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        tools:text="Saif Ali"
+        android:fontFamily="sans-serif"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageButton
+        android:id="@+id/topicExpandButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_forward_arrow"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/image" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontalRecyclerView"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/horizontal_layout"
+        />
+
+    <RelativeLayout
+        android:id="@+id/DetailsOfApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/appDetails"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:fontFamily="sans-serif"
+            tools:text="@string/dummyText"
+            />
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/weather"
+            android:layout_toEndOf="@+id/appDetails"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:text="@string/temp"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="cursive"
+            app:drawableStartCompat="@drawable/ic_cloud"
+            android:drawablePadding="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/weather"
+            android:layout_toEndOf="@+id/appDetails"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/applogo"
+            />
+
+        <ImageView
+            android:layout_below="@+id/appIcon"
+            android:id="@+id/stayHome"
+            android:src="@drawable/tipscorona"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/stayHome"
+            android:id="@+id/covid"
+            android:src="@drawable/stats_covid2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</ScrollView>
